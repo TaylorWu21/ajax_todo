@@ -1,0 +1,19 @@
+<% if(complete == 'true') { %>
+	<% var checked = "checked='true'" %>
+	<% var klass = 'checked' %>
+<% } else { %>
+	<% var checked = '' %>
+	<% var klass = '' %>
+<% } %>
+<div class='row'>
+	<div class='col m4 name'>
+		<span class='<%= klass %> title' data-id='<%= id %>' ><%= title %></ span>
+	</div>
+	<div class='col m4'>
+		<input type='checkbox' id='<%= id %>' <%= checked %> />
+		<label for='<%= id %>'>Complete?</label>
+	</div>
+	<div class='col m4'>
+		<button class='btn remove-task' data-id='<%= id %>'>Delete</button>
+	</div>
+</div>
